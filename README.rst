@@ -14,7 +14,7 @@ Requirements
 Installing
 ----------
 
-``pip install git+https://github.com/2upmedia/debugger_helper``
+``pip install git+ssh://git@github.com/2upmedia/debugger_helper``
 
 How it works
 ------------
