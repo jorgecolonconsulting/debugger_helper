@@ -96,7 +96,7 @@ Setting up Visual Studio Code
     import ptvsd
     debugger_helper.attach_vscode(lambda host, port: ptvsd.enable_attach(address=(host, port), redirect_output=True))
 
-- go to the debug panel, add configuration, click on Python, then Remote Attach, set the host to ``127.0.0.1``, port to ``9000`` (or the port to match the port forwarding and the ``DEBUGGER_PORT`` environment variable)
+- go to the debug panel, add configuration, click on Python, then Remote Attach, set the host to ``127.0.0.1``, port to ``9000`` (or the port to match the port forwarding and the ``DEBUGGER_PORT`` environment variable). You should see those values in ``launch.json``.
 - for ``remoteRoot``, set it to the absolute path of the folder containing your python script on the server. For instance, maybe it's residing in ``/www/pythonapp/``. You'd use that for ``remoteRoot``.
 - set a breakpoint where you'd like the debugger to stop
 - Run the python script ``$ START_DEBUGGER=1 python app.py`` and waiting until it says it's ready to connect to the debugger
@@ -106,7 +106,7 @@ Setting up Pycharm
 ------------------
 - install ``pydevd_pycharm`` on the *server*
 - add a reverse port forward from the server to your machine via ssh (or putty)
-- add a Run Configuration for Python Remote Debug. Set the host to ``127.0.0.1`` and port ``9000``.
+- add a Run Configuration for Python Remote Debug. Set the host to ``127.0.0.1`` and port ``9000``. Save it.
 - in the configuration and path mapping field add a mapping for the absolute path of the project root to the absolute path of the same project root, but on the server
 - add the following to somewhere in the top-most part of your python project. For instance, if it's a Flask app with an app.py file you might place it right at the top after your imports.
 
